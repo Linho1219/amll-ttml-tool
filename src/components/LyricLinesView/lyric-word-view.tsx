@@ -482,7 +482,7 @@ const LyricWordViewEditAdvance = ({
 	);
 };
 
-const LyricWorldViewEdit = ({
+const LyricWordViewEdit = ({
 	wordAtom,
 	wordIndex,
 	line,
@@ -576,7 +576,7 @@ const LyricWorldViewEdit = ({
 	);
 };
 
-const LyricWorldViewSync: FC<{
+const LyricWordViewSync: FC<{
 	wordAtom: Atom<LyricWord>;
 	wordIndex: number;
 	line: LyricLine;
@@ -718,7 +718,7 @@ export const LyricWordView: FC<{
 	return (
 		<div>
 			{toolMode === ToolMode.Edit && layoutMode === LayoutMode.Simple && (
-				<LyricWorldViewEdit
+				<LyricWordViewEdit
 					wordAtom={wordAtom}
 					line={line}
 					lineIndex={lineIndex}
@@ -734,7 +734,7 @@ export const LyricWordView: FC<{
 				/>
 			)}
 			{toolMode === ToolMode.Sync && !isWordBlank && (
-				<LyricWorldViewSync
+				<LyricWordViewSync
 					wordAtom={wordAtom}
 					line={line}
 					lineIndex={lineIndex}
